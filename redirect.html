@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Redireccionando...</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get the 'treeId' parameter from the URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const treeId = urlParams.get("treeId");
+
+      if (treeId) {
+        // Redirect to the Google Sites page with the tree ID as a parameter
+        window.location.href = `https://www.regalaraices.com/sigue-tu-%C3%A1rbol?treeId=${encodeURIComponent(treeId)}`;
+      } else {
+        document.body.innerHTML = "<h3>Error: No se encontró el ID del árbol.</h3>";
+      }
+    });
+  </script>
+</head>
+<body>
+  <p>Redireccionando...</p>
+</body>
+</html>
